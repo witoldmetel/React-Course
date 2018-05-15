@@ -1,31 +1,44 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Link } from 'react-router-dom';
 
 class postNew extends Component {
     renderField(field) {
+        const { meta: { touched, error } } = field;
+        const className = `form-group ${touched && error ? 'has-danger' : ''}`
+
         return (
-            <div className="form-group">
+            <div className={className}>
                 <label>{field.label}</label>
                 <input
                     className="form-control"
                     type="text"
                     {...field.input}
                 />
+                <div className="text-help">
+                    {touched ? error : ''}
+                </div>
             </div>
         )
     }
 
+    onSubmit(values) {
+        console.log(values);
+    }
+
     render() {
+        const { handleSubmit } = this.props;
+
         return (
-            <form>
+            <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                 <Field
                     label="Title"
                     name="title"
                     component={this.renderField}
                 />
                 <Field
-                    label="Tags"
-                    name="tags"
+                    label="Categories"
+                    name="categories"
                     component={this.renderField}
                 />
                 <Field
@@ -33,11 +46,32 @@ class postNew extends Component {
                     name="content"
                     component={this.renderField}
                 />
+                <button type="submit" className="btn btn-primary">Submit</button>
+                <Link className="btn btn-danger" to="/">Cancel</Link>
             </form>
         );
     }
 }
 
+function validate(values) {
+    const errors = {};
+
+    if(!values.title) {
+        errors.title ="Enter the title!";
+    }
+
+    if(!values.categories) {
+        errors.categories = "Enter the categories!";
+    }
+
+    if(!values.content) {
+        errors.content = "Enter the content!";
+    }
+
+    return errors;
+}
+
 export default reduxForm({
+    validate,
     form: 'PostsNewForm'
 })(postNew);
