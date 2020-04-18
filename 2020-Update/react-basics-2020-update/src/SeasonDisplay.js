@@ -13,5 +13,18 @@ export const SeasonDisplay = (props) => {
 		}
 	};
 
-	return <div>Season: {getSeason(props.lat)}</div>;
+	const getRenderer = () => {
+		return getSeason(props.lat) === 'summer' ? (
+			<div>
+				<WbSunny />
+				SUMMER
+			</div>
+		) : (
+			<div>
+				<AcUnit /> WINTER
+			</div>
+		);
+	};
+
+	return getRenderer();
 };
