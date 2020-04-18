@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { AcUnit, WbSunny } from '@material-ui/icons';
+
 export const SeasonDisplay = (props) => {
 	const getSeason = (latitude) => {
 		const month = new Date().getMonth();
