@@ -1,22 +1,18 @@
 import React from 'react';
 
+import { ImageCard } from '../components/ImageCard';
+
+import './List.css';
+
 export class List extends React.Component {
-	getList = (items) => {
-		console.log(items);
-		return items.map((item) => {
-			return (
-				<div key={item.id} className="ui segment">
-					<img src={item.urls.small} />
-				</div>
-			);
-		});
-	};
+	getList = (items) =>
+		items.map((item) => <ImageCard key={item.id} imageData={item} />);
 
 	render() {
 		return !this.props.images ? (
 			<div className="ui segment">Empty :(</div>
 		) : (
-			this.getList(this.props.images)
+			<div className="image-list">{this.getList(this.props.images)}</div>
 		);
 	}
 }
