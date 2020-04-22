@@ -1,12 +1,12 @@
 import React from 'react';
 
-import ContextLanguage from '../contexts/ContextLanguage';
+import { Context } from '../contexts/LanguageStore';
 
 class Field extends React.Component {
-	static contextType = ContextLanguage;
+	static contextType = Context;
 
 	render() {
-		const text = this.context === 'english' ? 'Name:' : 'Imie:';
+		const text = this.context.language === 'english' ? 'Name:' : 'Imie:';
 
 		return (
 			<form className="ui form">

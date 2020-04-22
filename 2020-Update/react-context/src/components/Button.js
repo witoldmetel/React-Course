@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContextLanguage from '../contexts/ContextLanguage';
+import { Context } from '../contexts/LanguageStore';
 import ContextColor from '../contexts/ContextColor';
 
 class Button extends React.Component {
@@ -9,9 +9,11 @@ class Button extends React.Component {
 			<ContextColor.Consumer>
 				{(color) => (
 					<div className={`ui button ${color}`}>
-						<ContextLanguage.Consumer>
-							{(value) => (value === 'english' ? 'Submit' : 'Potwierdz')}
-						</ContextLanguage.Consumer>
+						<Context.Consumer>
+							{({ language }) =>
+								language === 'english' ? 'Submit' : 'Potwierdz'
+							}
+						</Context.Consumer>
 					</div>
 				)}
 			</ContextColor.Consumer>
