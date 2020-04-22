@@ -1,20 +1,20 @@
 import React from 'react';
 
-import contextLanguage from '../contexts/contextLanguage';
-import contextColor from '../contexts/contextColor';
+import ContextLanguage from '../contexts/ContextLanguage';
+import ContextColor from '../contexts/ContextColor';
 
 class Button extends React.Component {
 	render() {
 		return (
-			<contextColor.Consumer>
+			<ContextColor.Consumer>
 				{(color) => (
 					<div className={`ui button ${color}`}>
-						<contextLanguage.Consumer>
+						<ContextLanguage.Consumer>
 							{(value) => (value === 'english' ? 'Submit' : 'Potwierdz')}
-						</contextLanguage.Consumer>
+						</ContextLanguage.Consumer>
 					</div>
 				)}
-			</contextColor.Consumer>
+			</ContextColor.Consumer>
 		);
 	}
 }

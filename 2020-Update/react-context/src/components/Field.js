@@ -1,9 +1,9 @@
 import React from 'react';
 
-import contextLanguage from '../contexts/contextLanguage';
+import ContextLanguage from '../contexts/ContextLanguage';
 
 class Field extends React.Component {
-	static contextType = contextLanguage;
+	static contextType = ContextLanguage;
 
 	render() {
 		const text = this.context === 'english' ? 'Name:' : 'Imie:';
