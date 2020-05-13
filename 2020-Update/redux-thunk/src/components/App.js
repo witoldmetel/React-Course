@@ -5,7 +5,7 @@ import { fetchPosts } from '../actions';
 
 class App extends React.Component {
 	componentDidMount() {
-		this.props.fetchPosts();
+		fetchPosts();
 	}
 
 	render() {
