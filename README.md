@@ -24,6 +24,17 @@ Redux thunk in practise
 
 Basics of react hooks
 
+### Streams
+
+App which handle with:
+
+- react router
+- authentication in react
+- redux form
+- CRUD operations in react/redux
+- error handling
+- react portals
+
 # Legacy Code
 
 ### React-Training
