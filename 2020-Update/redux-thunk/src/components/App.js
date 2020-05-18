@@ -8,9 +8,27 @@ class App extends React.Component {
 		fetchPosts();
 	}
 
+	renderList() {
+		return this.props.posts.map((post) => {
+			return (
+				<div className="item" key={post.id}>
+					<i className="large middle aligned icon user" />
+					<div className="content">
+						<h2>{post.title}</h2>
+					</div>
+				</div>
+			);
+		});
+	}
+
 	render() {
-		return <div className="App">App</div>;
+		console.log(this.props.posts);
+		return <div className="App">{this.renderList()}</div>;
 	}
 }
 
-export default connect(null, fetchPosts)(App);
+const mapStateToProps = (state) => {
+	return { posts: state.posts };
+};
+
+export default connect(mapStateToProps, { fetchPosts })(App);
