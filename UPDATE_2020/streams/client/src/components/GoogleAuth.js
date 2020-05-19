@@ -34,7 +34,7 @@ class GoogleAuth extends Component {
 	get renderAuthButton() {
 		if (this.props.isSignedIn === null) {
 			return (
-				<div className="ui active inverted dimmer">
+				<div className="ui active inverted dimmer item">
 					<div className="ui loader"></div>
 				</div>
 			);
