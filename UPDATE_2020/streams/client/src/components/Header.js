@@ -14,7 +14,9 @@ export default class Header extends Component {
 					<Link to="/streams/show" className="item">
 						All Streams
 					</Link>
-					<GoogleAuth />
+					<div className="item">
+						<GoogleAuth />
+					</div>
 				</div>
 			</div>
 		);
