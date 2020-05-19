@@ -29,9 +29,9 @@ Basics of react hooks
 App which handle with:
 
 - react router
-- authentication in react
+- authentication in react using `google OAuth`
 - redux form
-- CRUD operations in react/redux
+- CRUD operations in react/redux using `json-server`
 - error handling
 - react portals
 
