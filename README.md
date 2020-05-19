@@ -35,6 +35,12 @@ App which handle with:
 - error handling
 - react portals
 
+Enable debug session in redux-devtools
+
+```
+http://localhost:3000/?debug_session=debbuging
+```
+
 # Legacy Code
 
 ### React-Training
