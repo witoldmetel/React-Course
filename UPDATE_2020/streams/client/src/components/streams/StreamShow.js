@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import flv from 'flv.js';
+import { connect } from 'react-redux';
 
 import { fetchStream } from '../../actions';
 
@@ -10,9 +10,36 @@ class StreamShow extends Component {
 
 		this.videoRef = React.createRef();
 	}
+
 	componentDidMount() {
-		this.props.fetchStream(this.props.match.params.id);
+		const { id } = this.props.match.params;
+
+		this.props.fetchStream(id);
+		this.renderPlayer();
 	}
+
+	componentDidUpdate() {
+		this.renderPlayer();
+	}
+
+	componentWillUnmount() {
+		this.player.destroy();
+	}
+
+	renderPlayer = () => {
+		const { id } = this.props.match.params;
+
+		if (this.player || !this.props.stream) {
+			return;
+		}
+
+		this.player = flv.createPlayer({
+			type: 'flv',
+			url: `http://localhost:8000/live/${id}.flv`,
+		});
+		this.player.attachMediaElement(this.videoRef.current);
+		this.player.load();
+	};
 
 	render() {
 		return !this.props.stream ? (
