@@ -8,6 +8,7 @@ class GoogleAuth extends Component {
 		window.gapi.load('client:auth2', () => {
 			window.gapi.client
 				.init({
+					// @todo: Update clientId
 					clientId:
 						'505686962864-nr2dg19easehur39va23au15u3kqdakb.apps.googleusercontent.com',
 					scope: 'email',
