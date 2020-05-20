@@ -22,7 +22,7 @@ export default class App extends Component {
 						<Route path="/streams/new" component={StreamCreate} />
 						<Route path="/streams/delete/:id" component={StreamDelete} />
 						<Route path="/streams/edit/:id" component={StreamEdit} />
-						<Route path="/streams/show" component={StreamShow} />
+						<Route path="/streams/:id" component={StreamShow} />
 					</>
 				</Router>
 			</div>
