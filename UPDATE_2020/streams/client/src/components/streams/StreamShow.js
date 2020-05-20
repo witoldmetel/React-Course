@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// const NodeMediaServer = require('node-media-server');
 
 import { fetchStream } from '../../actions';
 
