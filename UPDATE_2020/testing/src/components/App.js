@@ -6,8 +6,8 @@ import CommentBox from './CommentBox';
 function App() {
 	return (
 		<div className="App">
-			<CommentList />
 			<CommentBox />
+			<CommentList />
 		</div>
 	);
 }
