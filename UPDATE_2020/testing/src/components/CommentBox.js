@@ -12,8 +12,6 @@ export default class CommentBox extends Component {
 	onSubmit = (e) => {
 		e.preventDefault();
 
-		console.log(this.state.comment);
-
 		this.setState({ comment: '' });
 	};
 
