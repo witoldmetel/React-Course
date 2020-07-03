@@ -5,7 +5,11 @@ import { createStore } from 'redux';
 import reducers from 'reducers';
 
 export default ({ children, initialState = {} }) => {
-	return (
-		<Provider store={createStore(reducers, initialState)}>{children}</Provider>
+	const store = createStore(
+		reducers,
+		initialState,
+		applyMiddleware(reduxPromise)
 	);
+
+	return <Provider store={store}>{children}</Provider>;
 };
