@@ -1,28 +1,10 @@
-# Update 2020
+# React Course
 
-### React-Basics
+## Table of contents
 
-Basics of react
+- [Projects](#projects)
 
-### React-State
-
-Basics of react state
-
-### React-Context
-
-React context in practise
-
-### Redux-Basics
-
-Basics of redux
-
-### Redux-Thunk
-
-Redux thunk in practise
-
-### Hooks-Basics / React-Basics-Hooks
-
-Basics of react hooks
+# Projects
 
 ### Streams
 
@@ -45,7 +27,7 @@ http://localhost:3000/?debug_session=debbuging
 
 Testing react app with Jest
 
-# Legacy Code
+## Legacy Code
 
 ### React-Training
 
