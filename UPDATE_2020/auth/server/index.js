@@ -2,7 +2,12 @@ const express = require('express');
 const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan'); // login framework mostly using for debugging
+const mongoose = require('mongoose');
+
 const router = require('./router');
+
+// DB Setup
+mongoose.connect('mongodb://localhost:auth:auth');
 
 // App setup
 const app = express();
