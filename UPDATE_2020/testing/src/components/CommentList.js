@@ -4,11 +4,14 @@ import { connect } from 'react-redux';
 class CommentList extends Component {
 	render() {
 		return (
-			<ul>
-				{this.props.comments.map((comment, index) => {
-					return <li key={index}>{comment}</li>;
-				})}
-			</ul>
+			<div>
+				<h4>Comment List</h4>
+				<ul>
+					{this.props.comments.map((comment, index) => {
+						return <li key={index}>{comment}</li>;
+					})}
+				</ul>
+			</div>
 		);
 	}
 }
