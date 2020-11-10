@@ -12,6 +12,9 @@
 - [Redux](#Redux)
 - [React Contex](#React-Contex)
 - [React Hooks](#React-Hooks)
+- [REST](#REST)
+- [React Testing](#React-Testing)
+- [Cookies vs Tokens](#Cookies-vs-Tokens)
 - [Projects](#projects)
 
 # What is a framework?
@@ -78,6 +81,25 @@ Middleware
 ![Screen](/screens/19.png)
 
 # React Hooks
+
+![Screen](/screens/20.png)
+![Screen](/screens/21.png)
+
+# REST
+
+REST Convention - standardized system for designing API’s
+
+![Screen](/screens/22.png)
+
+# React Testing
+
+![Screen](/screens/23.png)
+
+Source: https://blog.logrocket.com/comparing-react-testing-libraries
+
+# Cookies vs Tokens
+
+![Screen](/screens/24.png)
 
 # Projects
 
