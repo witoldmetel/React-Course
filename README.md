@@ -61,6 +61,106 @@ React is split into to separate libraries.
 
 ![Screen](/screens/9.png)
 
+## Mounting
+
+1. Constructor
+   > The first thing that gets called is your component constructor, if your component is a class component.
+
+Most Common Use Case For Constructor:
+
+Setting up state, creating refs and method binding.
+
+2. getDerivedStateFromProps
+
+> When mounting, getDerivedStateFromProps is the last method called before rendering. You can use it to set state according to the initial props.
+
+Most Common Use Case For getDerivedStateFromProps (during mount):
+
+Returning a state object based on the initial props.
+
+3. render
+
+> It returns the JSX of your actual component.
+
+Most Common Use Case For Render:
+
+Returning component JSX.
+
+4. componentDidMount
+
+> After we’ve rendered our component for the first time, this method is called.
+
+Most Common Use Case for componentDidMount:
+
+Starting AJAX calls to load in data for your component.
+
+## Updating
+
+1. getDerivedStateFromProps
+
+> If you need to update your state based on a prop changing, you can do it here by returning a new state object.
+
+Most Common Use Case:
+
+Updating state based on props, when the props themselves aren’t enough.
+
+2. shouldComponentUpdate
+
+> We have new props. Typical React dogma says that when a component receives new props, or new state, it should update.
+
+Most Common Use Case:
+
+Controlling exactly when your component will re-render.
+
+3. render
+
+Same as before!
+
+4. getSnapshotBeforeUpdate
+
+> it’s called between render and the updated component actually being propagated to the DOM. It exists as a last-chance-look at your component with its previous props and state.
+
+Most Common Use Case:
+
+Taking a look at some attribute of the current DOM, and passing that value on to componentDidUpdate.
+
+5. componentDidUpdate
+
+> Now, our changes have been committed to the DOM.
+> In componentDidUpdate, we have access to three things: the previous props, the previous state, and whatever value we returned from getSnapshotBeforeUpdate.
+
+Most Common Use Case for componentDidUpdate:
+
+Reacting to committed changes to the DOM.
+
+## Unmounting
+
+1. componentWillUnmount
+
+> Basically, clean up anything to do that solely involves the component in question — when it’s gone, it should be completely gone.
+
+Most Common Use Case for componentWillUnmount:
+
+Cleaning up any leftover debris from your component.
+
+## Errors
+
+1. getDerivedStateFromError
+
+> Something broke. Not in your component itself, but one of its descendants.
+
+Most Common Use Case for getDerivedStateFromError:
+
+Updating state to display an error screen.
+
+2. componentDidCatch
+
+> it is triggered when an error occurs in a child component. The difference is rather than updating state in response to an error, we can now perform any side effects, like logging the error
+
+Most Common Use Case for componentDidCatch:
+
+Catching and logging errors.
+
 # Redux
 
 ![Screen](/screens/10.png)
