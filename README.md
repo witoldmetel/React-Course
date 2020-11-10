@@ -9,7 +9,9 @@
 - [Class Component](#Class-Component)
 - [State](#State)
 - [Component Lifecycle](#Component-Lifecycle)
-- [Controlled vs Uncontrolled Elements](#Controlled-vs-Uncontrolled-Elements)
+- [Redux](#Redux)
+- [React Contex](#React-Contex)
+- [React Hooks](#React-Hooks)
 - [Projects](#projects)
 
 # What is a framework?
@@ -56,7 +58,26 @@ React is split into to separate libraries.
 
 ![Screen](/screens/9.png)
 
-# Controlled vs Uncontrolled Elements
+# Redux
+
+![Screen](/screens/10.png)
+![Screen](/screens/11.png)
+
+Middleware
+![Screen](/screens/12.png)
+![Screen](/screens/13.png)
+![Screen](/screens/14.png)
+
+![Screen](/screens/15.png)
+![Screen](/screens/16.png)
+![Screen](/screens/17.png)
+
+# React Contex
+
+![Screen](/screens/18.png)
+![Screen](/screens/19.png)
+
+# React Hooks
 
 # Projects
 
