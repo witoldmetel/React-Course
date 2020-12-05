@@ -185,6 +185,8 @@ Middleware
 ![Screen](/screens/20.png)
 ![Screen](/screens/21.png)
 
+https://medium.com/swlh/the-ugly-side-of-hooks
+
 # REST
 
 REST Convention - standardized system for designing API’s
