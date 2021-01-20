@@ -60,6 +60,7 @@ React is split into to separate libraries.
 # Component Lifecycle
 
 ![Screen](/screens/9.png)
+![Screen](/screens/25.png)
 
 ## Mounting
 
